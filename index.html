@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imperio Negro</title>
+<link rel="stylesheet" href="spotify.css">
+</head>
+<body>
+<header class="top">
+  <button id="burger" class="burger" aria-label="Abrir menú" aria-controls="drawer">☰</button>
+  <div class="logo">Imperio <span>Negro</span></div>
+</header>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menú principal">
+  <div class="drawer-head"><b>Imperio <span>Negro</span></b><button id="cerrar" aria-label="Cerrar menú">✕</button></div>
+  <nav class="nav" id="nav">
+    <button data-v="inicio">🏠 Inicio</button>
+    <button data-v="buscar">🔎 Buscar</button>
+    <button data-v="biblioteca">📚 Biblioteca</button>
+    <button data-v="favoritos">♥ Favoritos</button>
+    <button data-v="registro">📝 Registro</button>
+  </nav>
+  <h3 class="pl-titulo">Playlists</h3>
+  <ul class="pl" id="pl"></ul>
+</aside>
+
+<main id="vista"></main>
+
+<div class="toast" id="toast" role="status"></div>
+
+<footer class="player" id="player">
+  <div class="np"><div class="np-foto" id="npFoto">♪</div>
+    <div class="np-txt"><b id="npTitulo">Elige una canción</b><small id="npArtista">—</small></div></div>
+  <div class="ctrl">
+    <div class="botones">
+      <button id="prev" aria-label="Anterior">⏮</button>
+      <button id="play" class="big" aria-label="Reproducir">▶</button>
+      <button id="next" aria-label="Siguiente">⏭</button>
+    </div>
+    <div class="barra"><span id="tAct">0:00</span><input id="prog" type="range" min="0" max="100" value="0" step="0.1" aria-label="Progreso"><span id="tTot">0:00</span></div>
+  </div>
+  <div class="vol"><span>🔊</span><input id="vol" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volumen"></div>
+  <audio id="audio" preload="none"></audio>
+</footer>
+<script src="spotify.js"></script>
+</body>
+</html>
